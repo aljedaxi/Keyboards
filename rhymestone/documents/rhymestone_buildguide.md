@@ -1,323 +1,324 @@
-# Rhymestone ビルドガイド
+#Rhymestone Build Guide
 
-## パーツ一覧
+## Parts list
 
-![img](_image/20181212-PC120065.jpg)  
+! [img] (_image / 20181212-PC120065.jpg)
 
-## キット付属品
+## Kit accessories
 
-| 名前 | 数 | 備考 |
+| Name | Number | Remarks |
 | ---- | ---- | --- |
-| PCB | 2枚 | |
-| トッププレート | 2枚 | 四角い穴がいっぱい空いたほうです |
-| ボトムプレート | 2枚 | ビス穴しかあいてないほう |
-| OLED・Pro Micro保護プレート | 2枚 | |
-| *30キーチャレンジ用OLED・Pro Micro保護プレート* | *2枚* | *オプション* |
-| M2スペーサー 8mm | 12個 | |
-| プラスペーサー 3mm | 8個 | M2スペーサーと組み合わせて使います |
-| M2ネジ 5mm | 20個 | |
-| M2黒皿ネジ 4mm| 4個 | 保護プレートに取り付けるネジです |
-| ゴム足 | 8個 | 大小4個ずつ |
-| ダイオード | 40個 |  |
-| TRRSジャック | 2個 | |
-| タクトスイッチ | 2個 | |
+| PCB | 2 sheets | |
+| Top plate | 2 sheets | The one with a lot of square holes |
+| Bottom plate | 2 sheets | Those with only screw holes |
+| OLED / Pro Micro protective plate | 2 sheets | |
+| * 30 OLED / Pro Micro protective plate for key challenge * | * 2 sheets * | * Option * |
+| M2 spacer 8mm | 12 pieces | |
+| Plastic spacer 3mm | 8 pieces | Used in combination with M2 spacer |
+| M2 screws 5mm | 20 pieces | |
+| M2 black countersunk screws 4mm | 4 pcs | Screws to attach to the protective plate |
+| Rubber feet | 8 | 4 large and small |
+| Diodes | 40 pieces | |
+| TRRS jack | 2 | |
+| Tact switch | 2 | |
 
-## キット以外に必要なもの
+## What you need other than the kit
 
-| 名前 | 数 | 備考 |
+| Name | Number | Remarks |
 | ---- | ---- | --- |
-| 3.5mmステレオケーブル(3極) | 1本 | キーボード間接続用 |
-| MicroUSBケーブル | 1本 | キーボードとPC接続用 |
-| キースイッチ | 40個 | MX互換のもの |
-| キーキャップ | 40個 | MX互換のもの |
-| Pro Micro | 2個 | |
-| スプリングピンヘッダ 12P | 4個 | 交換や確認にも便利なので必須と言っていいくらい推奨 |
-| MXソケット | 40個 | MXスイッチ用ソケット |
-| *SK6812mini* | *40個* | *バックライト用（オプション）* |
-| *OLEDモジュール* | *1～2個* | *OLED用（オプション）* |
-| *ピンソケット 4P* | *1～2個* | *OLED用（オプション）* |
-| *ピンヘッダ 4P* | *1～2個* | *OLED用（オプション）* |
+| 3.5mm stereo cable (3 poles) | 1 | For connection between keyboards |
+| MicroUSB cable | 1 | For keyboard and PC connection |
+| Key switches | 40 | MX compatible |
+| Keycaps | 40 pcs | MX compatible |
+| Pro Micro | 2 pieces | |
+| Spring pin header 12P | 4 pieces | It is convenient to replace and check, so it is recommended to say that it is essential |
+MX sockets | 40 pcs | MX switch sockets |
+| * SK6812mini * | * 40 pieces * | * For backlight (optional) * |
+| * OLED module * | * 1-2 pieces * | * For OLED (optional) * |
+| * Pin socket 4P * | * 1-2 pieces * | * For OLED (optional) * |
+| * Pin header 4P * | * 1-2 pieces * | * For OLED (optional) * |
 
-### 補足
+### Supplement
 
 #### pro micro
 
-　大抵ProMicro買うとピンヘッダが付属しているから買わなくてもいいやって考えがちですが、ちょっとお高いコンスル―用スプリングピンヘッダにすると
+Most of the time, when you buy ProMicro, you don't have to buy it because it comes with a pin header, but if you use a slightly expensive spring pin header for consul,
 
-- キーボード基板の裏表間違ってはんだ付けしてしまった時のリカバリ
-- もげマイクロ対策
-- Pro Microの文鎮化(異常なデータを書いた時)の交換、復元対策
-- Pro Microを再利用可能
+--Recovery when the front and back of the keyboard board are soldered by mistake
+--Moke micro measures
+--Replacement and restoration measures for Pro Micro's brick-and-mortar (when writing abnormal data)
+--Pro Micro can be reused
 
-など、メリットしかないので超オススメします。どうしても直付けしたい玄人さんでOLEDを取り付ける場合は先に「OLED取り付けのためのPCBのランドショート」の項を先に済ませておいてください。  
+I highly recommend it because it has only merits. If you are an expert who wants to install OLED directly, please complete the section "PCB land short for OLED installation" first.
 
-#### OLEDとOLED用ピンソケット
+#### OLED and pin socket for OLED
 
-　OLEDは両手に付けることが出来ます。左手側に各種動作確認用のステータスを表示しますので、片側だけの購入でも十分機能します。  
+OLED can be attached to both hands. Since the status for checking various operations is displayed on the left hand side, it works well even if you purchase only one side.
 
-　AliExpressや遊舎工房でOLEDだけ買った場合はピンソケットが無いので別途秋月電子かヒロスギネットなどで別途購入してください。色々種類があるのですが、ソケットは
+If you bought only OLED from AliExpress or Yusha Kobo, there is no pin socket, so please purchase it separately from Akizuki Denshi or Hirosugi Net. There are various types, but sockets
 
-- 2.54mmピッチ  
-- ロープロファイル（低背）基板取り付け高さ3.5mm  
-- ピンソケット  
-- 1x4(4P)  
+--2.54mm pitch
+--Low profile (low profile) board mounting height 3.5 mm
+--Pin socket
+--1x4 (4P)
 
-　のものが必要です。
+I need something.
 
 #### SK6812mini
 
-　バックライト用SK6812miniはハンダ熱に弱く温度調節機能付きのハンダごてでないと失敗が多く時間がかかり部品をダメにしてしまいます。中華製の温度調節機能付きのハンダごては安いのですが、モノによっては温度が正確でなく部品を壊す場合もありますので、可能な限りHAKKOなど日本のメーカーが出している温調ハンダごてを使ってください。またハンダのチップ（こて先）も標準で付いてくる鉛筆上のものではなく、斜めにカットされたタイプを別途購入するとめちゃくちゃ捗りますのでオススメです。  
+The SK6812mini for backlight is vulnerable to solder heat, and unless it is a soldering iron with a temperature control function, many failures will take time and parts will be damaged. A soldering iron with a temperature control function made in China is cheap, but depending on the item, the temperature may not be accurate and parts may be damaged, so as much as possible, a temperature control soldering iron produced by a Japanese manufacturer such as HAKKO Please use. Also, the solder tip (tip) is not the one on the pencil that comes as standard, but it is recommended to purchase a diagonally cut type separately as it will make a lot of progress.
 
-## 必要な道具
+## Necessary tools
 
-| 名前 | 備考 |
+| Name | Remarks |
 | ---- | ---- |
-| はんだごて | バックライトLEDを取り付ける場合は温度調整が出来るものが必須です<br/>(温度調整が出来ないとLED破損率がかなり高いです) |
-| フラックス | バックライトLEDを取り付ける場合はあるとメッチャ捗るので必須です |
-| 糸ハンダ | 0.8mm程度のものを推奨します |
-| ハンダ吸い取り線 | 失敗したとき用 |
-| ニッパー | ダイオードのリード線などの切断用です |
-| ピンセット | ProMicroリセットしたりチップLEDのはんだづけで使用します |
-| フラックス除去剤 | 必須ではありませんがはんだ付け後のベタつきを除去出来、はんだによる黄色い変色も拭き取れてキレイな仕上がりになります |
-| マスキングテープ | しるし付け、仮固定に使用。100均の柄付きでもOK |
+| Soldering iron | When installing a backlight LED, it is essential to have something that can adjust the temperature <br /> (If the temperature cannot be adjusted, the LED damage rate is quite high) |
+| Flux | If you install a backlight LED, it will be a mess, so it is essential |
+| Thread solder | 0.8mm is recommended |
+| Solder blotting line | For failure |
+| Nippers | For cutting diode lead wires, etc. |
+| Tweezers | ProMicro Used for resetting and soldering chip LEDs |
+Flux remover | Although it is not essential, it can remove stickiness after soldering, and the yellow discoloration caused by solder can be wiped off for a beautiful finish.
+| Masking tape | Used for marking and temporary fixing. Even with a 100-square pattern is OK |
 
-　mteiさんの[Helix キーボードキットの製作に必要な工具メモ](https://gist.github.com/mtei/6957107a676ddfa85bde0ae41f8fa849)
-やhdbxさんの[自作キーボードを始めるにあたって用意すべきツール](https://hdbx.hateblo.jp/entry/2018/06/01/215401)も参考になります。  
+Mtei's [Tool memo required to make Helix keyboard kit] (https://gist.github.com/mtei/6957107a676ddfa85bde0ae41f8fa849)
+And hdbx's [Tools to prepare for starting your own keyboard] (https://hdbx.hateblo.jp/entry/2018/06/01/215401) is also helpful.
 
-![img](_image/20181212-PC120070.jpg)  
-![img](_image/20181213-PC130102.jpg)  
+! [img] (_image / 20181212-PC120070.jpg)
+! [img] (_image / 20181213-PC130102.jpg)
 
-## promicroの準備
+## Preparation of pro micro
 
-　promicroのコネクタ補強、コンスルーピンのはんだ付けを行ってください。  
-　promicroは実装されている面がキーボード基板に向くようにコンスルーを取り付けてください。  
- - promicroのコネクタ補強：[ProMicroのモゲ防止ついでにQMK_Firmwareを書き込む](https://qiita.com/hdbx/items/2f3e4ddfcadda2a5578e)
- - コンスルーピンのはんだ付け：[Helixベータ ビルドガイド](https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md)
+Reinforce the promicro connector and solder the conthrough pin.
+For promicro, attach the conthrough so that the surface on which it is mounted faces the keyboard board.
+ --Promicro connector reinforcement: [Write QMK_Firmware while preventing ProMicro mog] (https://qiita.com/hdbx/items/2f3e4ddfcadda2a5578e)
+ --Soldering Consul Pins: [Helix Beta Build Guide] (https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md)
 
-![img](_image/20190131-P1310235.jpg)  
+! [img] (_image / 20190131-P1310235.jpg)
 
-### QMKを準備する
+### Prepare QMK
 
-　このキーボードはQMKというキーボード用のソフトウェアで動作するようにプログラミングしています。あらかじめ登録してあるdefaultキーマップは作者が実際に使用しているもので、ほぼ何不自由なく使えるように工夫しています。
+This keyboard is programmed to work with keyboard software called QMK. The default keymap registered in advance is the one actually used by the author, and it is devised so that it can be used almost without any inconvenience.
 
-1. 下記リンクのQMK Toolboxをインストールします
-2. QMK Toolboxの「Keyboard from qmk.fm」の下のリストからrhymestoneを選びます
-   1. （もし見つからなければ以下のリンクのデフォルトhexファイルをDLして、「Local File」で選択してください）
-3. promicro(直付けの場合は基板)をPCに接続し、リセットボタンを押して書き込みます。
-   1. （リセットボタンをダブルクリックしないと書き込めないパターンのものもあります）
+1. Install QMK Toolbox linked below
+2. Select rhymestone from the list under "Keyboard from qmk.fm" in QMK Toolbox
+   1. (If you can't find it, download the default hex file from the link below and select it in "Local File")
+3. Connect the promicro (board in the case of direct mounting) to the PC and press the reset button to write.
+   1. (Some patterns cannot be written without double-clicking the reset button)
 
-書き込み方法などはサリチル酸さんの[（初心者編）自作キーボードにファームウェアを書き込む](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)の記事が参考になります。  
+For the writing method, refer to the article [(Beginner) Write firmware to your own keyboard] (https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox) by Salicylic Acid.
 
-[デフォルトhexファイル](https://qmk.fm/compiled/marksard_rhymestone_default.hex)  
-[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)
+[Default hex file] (https://qmk.fm/compiled/marksard_rhymestone_default.hex)
+[QMK Toolbox] (https://github.com/qmk/qmk_toolbox/releases)
 
-#### キーマップを自分好みにする
+#### Make the keymap your own
 
-　もしあなたがプログラミング未経験者なら、QMK Configuratorを使うのが早いでしょう。  
+If you are new to programming, using QMK Configurator will be faster.
 
-[QMK Configurator](https://docs.qmk.fm/#/ja/newbs_building_firmware_configurator)  
+[QMK Configurator] (https://docs.qmk.fm/#/ja/newbs_building_firmware_configurator)
 
-#### ビルド環境を作成する
+#### Create a build environment
 
-　自分でソースからビルドが出来るようになるとキーを一つ一つ細かい動作まで自在にカスタムすることが出来ます。  
+If you can build from the source by yourself, you can freely customize the keys one by one to the detailed operation.
 
-[QMK　ビルド環境を準備する](https://docs.qmk.fm/#/ja/newbs_getting_started)  
+[Prepare QMK build environment] (https://docs.qmk.fm/#/ja/newbs_getting_started)
 
-　rhymestoneのデフォルトキーマップは  
-```qmk compile -kb marksard/rhymestone -km default```
-で可能です。書き込む場合は
-```qmk flash -kb marksard/rhymestone -km default```  
-とすると、コンパイルが完了次第書き込み待ちになるので、その状態で基板にあるリセットボタンをクリック、もしくはダブルクリックで書き込みが始まります。  
+The default keymap for rhymestone is
+`` `qmk compile -kb marksard / rhymestone -km default```
+It is possible with. When writing
+`` `qmk flash -kb marksard / rhymestone -km default```
+Then, as soon as the compilation is completed, it will wait for writing, so in that state, click the reset button on the board or double-click to start writing.
 
-## 基板の裏と表について
+## About the back and front of the board
 
-　キースイッチが乗り、通常使用する際上を向く面を表、逆を裏とします。  
+The key switch is on, the side facing up during normal use is the front side, and the reverse side is the back side.
 
-## 基板の左右を決める
+## Determine the left and right of the board
 
-![img](_image/20181212-PC120073.jpg)  
+! [img] (_image / 20181212-PC120073.jpg)
 
-　付属の基板は左右どちらでも使用できるリバーシブル基板になっています。作成途中で左右を忘れないようにマステに左右と書いて、貼ったがわをオモテ（キースイッチを付けるほう）と決めておくと迷いがなくて良いです。  
+The attached board is a reversible board that can be used on either the left or right side. You don't have to hesitate if you write left and right on the mast so that you don't forget the left and right during the creation, and decide that the pasted gawa is the front (the one with the key switch).
 
-## ダイオードをはんだ付けする
+## Solder the diode
 
-### ダイオードの脚を曲げる
+### Bend the diode legs
 
-　基板に付ける前にダイオードの脚を全部曲げてしまいます。基板の穴の間隔を見極めて曲げるための冶具を探してみてください。  繋がったままの割りばしなどでも良いと思います。  
+Before attaching to the board, all the legs of the diode will be bent. Try to find a jig to bend the holes in the board. I think it's okay to use disposable chopsticks while they are still connected.
 
-![img](_image/20181212-PC120071.jpg)  
+! [img] (_image / 20181212-PC120071.jpg)
 
-　私はUSB-C to USB-Aの変換コネクタが丁度いい感じに使えたので、ダイオードを2,3個いっぺんに曲げていきました。  
+I was able to use the USB-C to USB-A conversion connector just right, so I bent a few diodes at once.
 
-![img](_image/20181212-PC120072.jpg)  
+! [img] (_image / 20181212-PC120072.jpg)
 
-### ダイオードのはんだ付け
+### Soldering diodes
 
-　ダイオードの取り付け向きは基板ごとに同じ方向なので、一つ確認して取り付けたら残りはすべて同じ方向で取り付けられます。ダイオードの黒い帯側を基板のダイオード取り付け穴の四角いほうに向けて取り付けてください。  
+The diode mounting direction is the same for each board, so if you check one and mount it, all the rest will be mounted in the same direction. Install the diode with the black band side facing the square side of the diode mounting hole on the board.
 
-![img](_image/diode.png)  
+! [img] (_image / diode.png)
 
-![img](_image/20181212-PC120074_2.jpg)  
+! [img] (_image / 20181212-PC120074_2.jpg)
 
-　左手側基板のウラ面からダイオードを差し込んでいきます。差し込んだらダイオードの足同士をネジって仮留めします。横一列ずつ差し込んでまとめてハンダ付けするとラクに速く出来ます。ハンダ付けしたら足を根元からカットしてください。  
+Insert the diode from the back side of the left hand side board. After inserting, twist the legs of the diode and temporarily fasten them. You can easily and quickly insert it in a row and solder it all together. After soldering, cut your legs from the root.
 
-![img](_image/20181212-PC120074.jpg)  
-![img](_image/20181212-PC120075.jpg)  
+! [img] (_image / 20181212-PC120074.jpg)
+! [img] (_image / 20181212-PC120075.jpg)
 
-　一列ずつ差し込み、ハンダ付け、カットを繰り返してください。右手側基板も同様に行ってください。  
+Insert one row at a time, solder and cut repeatedly. Do the same for the right-hand side board.
 
-![img](_image/20181212-PC120077.jpg)  
+! [img] (_image / 20181212-PC120077.jpg)
 
-## *(オプション)LEDをはんだ付けする*
+## * (Optional) Solder the LED *
 
-　フルカラーのチップLEDをキースイッチ裏に取り付けていきます。
+We will attach a full-color chip LED to the back of the key switch.
 
-### LEDの仕組みと接続順序
+### LED mechanism and connection order
 
-　このチップLEDは4つの端子（ランド）があり、それぞれVCC,GND,DIN,DOUTです。VCCとGNDは中学でやりましたね？それぞれ電池＋とーという認識でも良いと思います。DINとDOUTはLEDの点灯パターンを制御する線で、DINが入力、DOUTが出力になっています。このDIN、DOUTを数珠繋ぎすることによって複数のLEDを制御するようになっています。  
+This chip LED has 4 terminals (lands), which are VCC, GND, DIN, and DOUT, respectively. Did you do VCC and GND in junior high school? I think it's okay to recognize each as a battery +. DIN and DOUT are lines that control the LED lighting pattern, with DIN as the input and DOUT as the output. Multiple LEDs are controlled by connecting these DIN and DOUT in a row.
 
-　Rhymestoneの接続順ですが、リセットボタンの取り付け場所のある端を起点に外側から内側へぐるっと渦巻状に配線しています。数個取り付け→点灯確認→数個取り付け…としたほうが確実で速いので、この順番で取り付けてください。  
+Rhymestone is connected in a spiral shape from the outside to the inside, starting from the end where the reset button is installed. It is more reliable and faster to install several pieces → check lighting → install several pieces, so install them in this order.
 
-![img](_image/ledmap.png)  
+! [img] (_image / ledmap.png)
 
-### 向きを合わせる
+### Orient
 
-　基板のオモテにLEDのオモテ面が向くように取り付けます。  
-　取り付ける向きは基板ごとに一定ですので、最初の一つをちゃんと間違えずにつければあとはそれを真似すれば大丈夫です。  
+Install so that the front side of the LED faces the front side of the board.
+The mounting direction is fixed for each board, so if you attach the first one without making a mistake, you can imitate it.
 
-左手側  
-![img](_image/20181212-PC120088_2.jpg)  
-![img](_image/led_leftback.png)  
+Left hand side
+! [img] (_image / 20181212-PC120088_2.jpg)
+! [img] (_image / led_leftback.png)
 
-右手側  
-![img](_image/20181213-PC130103_2.jpg)  
-![img](_image/led_rightback.png)  
+Right hand side
+! [img] (_image / 20181213-PC130103_2.jpg)
+! [img] (_image / led_rightback.png)
 
-### 左手でピンセットでチップLEDつまんでPCBの穴にはめ込んで位置合わせ
+### Pinch the chip LED with tweezers with your left hand and fit it into the hole in the PCB for alignment.
 
-![img](_image/20181212-PC120087.jpg)  
+! [img] (_image / 20181212-PC120087.jpg)
 
-### つまんだまま右手でフラックスを塗る
+### Apply flux with your right hand while pinching
 
-　写真は撮影上つまんでませんが、つまんだままフラックスを塗って、次の作業に向かってください。  
+The photo is not pinched for shooting, but please apply the flux while pinching it and proceed to the next work.
 
-![img](_image/20181212-PC120091.jpg)  
+! [img] (_image / 20181212-PC120091.jpg)
 
-### 220度あたりに設定したハンダごてのこて先にハンダを少し付ける
+### Add a little solder to the tip of the soldering iron set around 220 degrees
 
-　コテ先は220度あたりにしてください。270度は高いです。  
-　ハンダごてにはんだを少し乗せます。  
-　ハンダを少し盛る感じでランドに擦り付けてランド同士を繋げます。  
-　基板のランドとチップLEDのランドが出来るだけ水平になるように4つあるランドの一つをまず付けます。付けたらピンセットを離して残り3つを同じように取り付けます。  
+The iron tip should be around 220 degrees. 270 degrees is high.
+Put a little solder on the soldering iron.
+Rubbing the lands with a little solder to connect the lands.
+First, attach one of the four lands so that the land of the board and the land of the chip LED are as horizontal as possible. After attaching, release the tweezers and attach the remaining three in the same way.
 
-![img](_image/20181212-PC120092.jpg)  
+! [img] (_image / 20181212-PC120092.jpg)
 
-### LEDの点灯確認
+### LED lighting confirmation
 
-　事前にpro microにLED動作確認用ファームを書き込んでいると思いますので、pro microを基板のオモテ（マステを貼った方）の白い枠にピンを合わせて取り付けてください。  
-　取り付ければLEDが光ると思います。光れば4つのピンのうち、VCC,GND,VINについてはキチンとはんだ付け出来ています。点灯していなければ、今付けたLEDのVCC,GND,VINのハンダがキチンとついてないか、一つ前に付けたVOUTのハンダがついていないのが主な原因です。
+I think that the LED operation check firmware is written on the pro micro in advance, so attach the pro micro by aligning the pins with the white frame on the front of the board (the one with the mast attached).
+I think that the LED will shine if installed. Of the four pins that shine, VCC, GND, and VIN can be soldered to each other. If it is not lit, the main reason is that the LED VCC, GND, and VIN solders you just attached are not soldered, or the VOUT solder you just attached is not attached.
 
-### 残りのランドに同じようにはんだする
+### Solder to the remaining lands in the same way
 
-　あとはこれを繰り返して片手20個、両手で合計40個を付けていきましょう。時々確認すると進捗が分かるので結構嬉しいですし、点灯しなかった時どこで何が起こったかが分かりやすいので地道にやってみてください。  
+After that, let's repeat this and attach 20 pieces with one hand and 40 pieces in total with both hands. I'm pretty happy because I can see the progress if I check it from time to time, and it's easy to understand where and what happened when it didn't light up, so please try it steadily.
 
-　全部取り付けた後、ハンダしたトコロがフラックスで汚れてベタ付きますので、気になるならフラックス除去剤で拭き取ってください。  
+After installing all of them, the soldered tokoro becomes dirty with flux and becomes sticky, so if you are concerned, wipe it off with a flux remover.
 
-![img](_image/20181213-PC130102.jpg)  
-![img](_image/20181213-PC130104.jpg)  
-![img](_image/20181213-PC130101.jpg)  
+! [img] (_image / 20181213-PC130102.jpg)
+! [img] (_image / 20181213-PC130104.jpg)
+! [img] (_image / 20181213-PC130101.jpg)
 
-## *(オプション)OLEDの取り付け*
+## * (Optional) OLED installation *
 
-### OLED取り付けのためのPCBのランドショート
+### PCB land shorts for OLED mounting
 
-　基板のオモテ側の、Pro Microを取り付ける下側に小さい■が8個4組あると思います。その1組みずつハンダでショートさせください。コツはフラックスを基板のハンダ面に塗って、ハンダごてにハンダを少量のせ基板に当て、4～7秒くらい当てたらスッと基板から離すこと。付かないなと思ったらハンダごてに乗ってるハンダを除去して再挑戦してください。  
+I think there are 4 sets of 8 small ■ on the front side of the board, on the lower side where Pro Micro is attached. Please short each pair with solder. The trick is to apply flux to the solder surface of the board, apply a small amount of solder to the soldering iron, apply it to the board, and then quickly remove it from the board after applying it for about 4 to 7 seconds. If you think it won't stick, remove the solder on the soldering iron and try again.
 
-![img](_image/20181213-PC130110.jpg)  
+! [img] (_image / 20181213-PC130110.jpg)
 
-### OLED用のピンソケット・ピンヘッダをはんだ付けする
+### Solder pin sockets and pin headers for OLEDs
 
-　ラクにまっすぐ取り付けるため、マスキングテープでまっすぐつくように仮押さえしてから裏返してはんだ付けします。  
+For easy straight mounting, temporarily press it with masking tape so that it sticks straight, then turn it over and solder it.
 
-## TRRSコネクタ、タクトスイッチをはんだ付けする
+## Solder TRRS connector and tact switch
 
-　ラクにまっすぐ取り付けるため、マスキングテープでまっすぐつくように仮押さえしてから裏返してはんだ付けします。  
-　タクトスイッチはパチッとはめ込んで裏返してはんだ付けします。  
+For easy straight mounting, temporarily press it with masking tape so that it sticks straight, then turn it over and solder it.
+The tact switch is snapped in and turned inside out for soldering.
 
-![img](_image/20181213-PC130111.jpg)  
+! [img] (_image / 20181213-PC130111.jpg)
 
-## トッププレートにスイッチをはめ込む
+## Fit the switch on the top plate
 
-　ソケットを先にはんだ付けしても良いのですが、先にトッププレートにスイッチを全部はめ込んで、ソケットを端子に差し込んだ後にハンダ付けしたほうが手早くキレイに取り付けられます。  
-　お好みのスイッチをトッププレートにはめ込んでください。  
+You can solder the socket first, but it is faster and cleaner to fit all the switches on the top plate first, insert the socket into the terminal, and then solder.
+Insert the switch of your choice into the top plate.
 
-![img](_image/20181213-PC130105.jpg)  
+! [img] (_image / 20181213-PC130105.jpg)
 
-## MXソケットをはんだ付けする
+## Solder the MX socket
 
-　まずトッププレートとPCBを合わせます。スイッチ裏の中央の出っ張りをPCBの穴に合わせて取り付けてください。  
+First, match the top plate and PCB. Align the central protrusion on the back of the switch with the hole in the PCB and attach it.
 
-![img](_image/20181213-PC130107.jpg)  
+! [img] (_image / 20181213-PC130107.jpg)
 
-　MXソケットをPCBのシルクの白いマークに合わせて取り付けます。スイッチのピンがMXソケットにちゃんと刺さっている事を確認しながらパチパチと全部付けてください。  
+Align the MX socket with the white silk mark on the PCB and attach it. Make sure that the pins of the switch are properly stuck in the MX socket, and attach all of them with crackling.
 
-![img](_image/20181213-PC130109.jpg)  
+! [img] (_image / 20181213-PC130109.jpg)
 
-　あとはハンダ付けです。MXソケットを取り付けると、スイッチの交換は可能になりますが、ソケットと基板の保持をハンダに頼っているため交換後スイッチが効かないなどのハンダ不良が発生する可能性があります。ただ厚く盛っても意味がないので、PCBとソケットの間にしっかりハンダを流します。  
-　ハンダごてのこて先に気持ち多めにハンダを付けて、ソケットの金具の隙間に見えるPCBに付ける気持ちで、ソケットの隙間を少しこじ開ける感じで熱を与えながら流し込みます。  
+The rest is soldering. When the MX socket is installed, the switch can be replaced, but since the socket and board are held by solder, soldering defects such as the switch not working after replacement may occur. However, it doesn't make sense to pile it thick, so pour the solder firmly between the PCB and the socket.
+Solder the tip of the soldering iron with a generous amount of solder, and pour it while applying heat as if you were trying to pry open the gap in the socket with the feeling of attaching it to the PCB that can be seen in the gap between the metal fittings of the socket.
 
-## スペーサーの取り付け
+## Installing spacers
 
-　ボトムプレートの保護紙の片側を剥がし、剥がした方にゴム脚を取り付けてください。標準でチルトするように大きいものと小さいものが入っていますので、小さいほう二つを手前に、大きいほう二つを奥に貼り付けてください。  
+Peel off one side of the protective paper on the bottom plate, and attach the rubber legs to the peeled side. Large and small ones are included so that they can be tilted as standard, so attach the two smaller ones to the front and the two larger ones to the back.
 
-![img](_image/20181213-PC130114.jpg)  
+! [img] (_image / 20181213-PC130114.jpg)
 
-　残りの保護紙も剥がして、8mmスペーサー4つと5mmネジを4つ使ってボトムプレートにねじ止めしてください。  
-　ねじ止めしたら、3mmの樹脂スペーサーを8mmスペーサーに差し込んでおきます。この樹脂スペーサーはスイッチ交換時のPCB落ち込みを防止するために機能します。  
+Peel off the remaining protective paper and screw it to the bottom plate using 4 8mm spacers and 4 5mm screws.
+After screwing, insert the 3mm resin spacer into the 8mm spacer. This resin spacer works to prevent the PCB from falling when the switch is replaced.
 
-![img](_image/20181213-PC130116.jpg)  
+! [img] (_image / 20181213-PC130116.jpg)
 
-## 保護パネルの取り付け
+## Installation of protective panel
 
-　Pro Micro周りの目隠しとOLEDを保護するためのプレートを取り付けます。8mmスペーサー二つを5mmのネジでPCB(写真の黄色〇の箇所)に取り付けます。  
-　プレートの保護紙を両方剥がして、黒の4mmネジでPCBに付けたスペーサーに取り付けてください。  
-　少し遊びがありますので、キーキャップを取り付けた時にキーキャップと干渉する場合は少しずらしてください。  
+Attach the blindfold around the Pro Micro and the plate to protect the OLED. Attach two 8mm spacers to the PCB (yellow circles in the photo) with 5mm screws.
+Peel off both protective papers on the plate and attach them to the spacer attached to the PCB with black 4mm screws.
+There is a little play, so if it interferes with the keycap when it is attached, shift it a little.
 
-![img](_image/20181213-PC130112.jpg)  
+! [img] (_image / 20181213-PC130112.jpg)
 
-## キーキャップの取り付け
+## Installation of keycap
 
-　お好みのキーキャップを取り付けてください。  
+Please attach your favorite keycap.
 
-## キーボードファームウェアの書き込み
+## Writing keyboard firmware
 
-　LEDバックライトのテストのためにled_testを書き込んでいた人は戻ってdefaultキーマップを書き込んでください。  
+If you were writing led_test for LED backlight test, please go back and write the default keymap.
 
-## テスト
+## Test
 
-　まず片方ずつPCに接続してテストしてください。片方づつ付けた場合は常に左手で認識するので、キーボードテスターアプリなどでキーが認識されているかチェックしてください。OLEDを取り付けている場合は、OLEDの四段目の表示がスイッチのステータスです。何かしら変化していればOKです。
+First, connect to the PC one by one and test. If you attach one by one, it will always be recognized by your left hand, so check if the keys are recognized by the keyboard tester app. If you have an OLED installed, the fourth OLED display is the switch status. It's okay if something has changed.
 
-　ProMicroとUSBを外しします。  
-　左右をTRRSケーブルでつないで、左手側のProMicroとUSBを接続してPCに認識させます。  
-　左右で通信が出来ているかチェックしてください。
+Remove ProMicro and USB.
+Connect the left and right with a TRRS cable, connect the Pro Micro on the left hand side and USB, and let the PC recognize it.
+Check if communication is possible on the left and right.
 
-## 完成！
+## Complete!
 
-　チェックして問題なさそうなら完成です！あなただけの一台に仕上げてください！
+Check it and if there seems to be no problem, it is complete! Please finish it as your own!
 
-![img](_image/20181214-PC140118.jpg)  
+! [img] (_image / 20181214-PC140118.jpg)
 
-## キースイッチの交換方法
+## How to replace the key switch
 
-　手では取り外しにくいため、amazonなどで販売されているキースイッチ引き抜き工具を使用して交換してください。  
+Since it is difficult to remove by hand, replace it using a key switch extraction tool sold by Amazon.
 
-## 30キーチャレンジ用OLED・Pro Micro保護プレートの使い方
+## How to use OLED / Pro Micro protective plate for 30 key challenge
 
-　最上段1段分のキースイッチを取り外し、通常の保護プレートを取り外して、30キーチャレンジ用の保護プレートを取り付けてください。  
-　キーマップについての解説は[ここにあります](https://github.com/marksard/qmk_firmware/blob/my_customize/keyboards/rhymestone/keymaps/like_jis_30keys/readme_jp.md)  
-![img](_image/30key.png)  
-　最初は親指の居場所が心許ないですが、慣れると面白いです！ぜひチャレンジしてみてください。  
+Remove the key switch for the top 1 step, remove the normal protective plate, and attach the protective plate for the 30 key challenge.
+The explanation about the keymap is [here] (https://github.com/marksard/qmk_firmware/blob/my_customize/keyboards/rhymestone/keymaps/like_jis_30keys/readme_jp.md)
+! [img] (_image / 30key.png)
+At first, I don't know where my thumb is, but it's interesting once I get used to it! Please try it.
 
-## トラブルシューティング
+## trouble shooting
 
-[トラブルシューティング](../../troubleshooting.md)ページを参考にしてください。  
+Please refer to the [Troubleshooting] (../../troubleshooting.md) page.
+
